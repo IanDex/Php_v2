@@ -1,0 +1,23 @@
+.alert--notify:not(.alert-info):not(.alert-success):not(.alert-warning):not(.alert-danger) {
+    background-color: rgba(0,0,0,.95);
+    border-radius: 8px;
+}
+.alert--notify {
+    max-width: 300px;
+    width: calc(100% - 30px);
+    padding-right: 80px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+    color: rgba(255,255,255,.85);
+}
+.alert-dismissible {
+    padding-right: 4.5rem;
+}
+.alert {
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 0 solid transparent;
+    border-radius: 2px;
+}
+.alert, .btn .badge, .page-link {
+    position: relative;
+}
