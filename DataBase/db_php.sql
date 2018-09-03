@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-09-2018 a las 04:28:15
+-- Tiempo de generación: 03-09-2018 a las 04:34:46
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -51,6 +51,25 @@ INSERT INTO `formulario` (`id`, `num_proceso`, `descripcion`, `sede`, `presupues
 (36, '12345689', 'Datos de descripcion.....', 'Bogotá', 12345689, '2018-09-02 12:39:47'),
 (37, '12345690', 'Proceso Creado a las 9:23 p. m.', 'Bogotá', 900000, '2018-09-02 21:22:14');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id_users` int(11) NOT NULL,
+  `user` varchar(20) NOT NULL,
+  `pass` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id_users`, `user`, `pass`) VALUES
+(1, 'usuario1', '5f4dcc3b5aa765d61d8327deb882cf99');
+
 --
 -- Índices para tablas volcadas
 --
@@ -62,6 +81,12 @@ ALTER TABLE `formulario`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_users`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -70,6 +95,12 @@ ALTER TABLE `formulario`
 --
 ALTER TABLE `formulario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
